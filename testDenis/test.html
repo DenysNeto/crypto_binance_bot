@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let order = 1000;
+      let steps = [
+        {
+          direction: "Short",
+          startIndex: 1,
+          finishIndex: 12,
+          startValue: 36453.37,
+          finishValue: 36400.87,
+        },
+        {
+          direction: "Short",
+          startIndex: 12,
+          finishIndex: 19,
+          startValue: 36400.87,
+          finishValue: 36349.88,
+        },
+        {
+          direction: "Long",
+          startIndex: 19,
+          finishIndex: 32,
+          startValue: 36349.88,
+          finishValue: 36409.28,
+        },
+        {
+          direction: "Long",
+          startIndex: 32,
+          finishIndex: 34,
+          startValue: 36409.28,
+          finishValue: 36465.69,
+        },
+        {
+          direction: "Long",
+          startIndex: 34,
+          finishIndex: 35,
+          startValue: 36465.69,
+          finishValue: 36517.45,
+        },
+        {
+          direction: "Short",
+          startIndex: 35,
+          finishIndex: 42,
+          startValue: 36517.45,
+          finishValue: 36453.95,
+        },
+        {
+          direction: "Long",
+          startIndex: 42,
+          finishIndex: 44,
+          startValue: 36453.95,
+          finishValue: 36514.59,
+        },
+        {
+          direction: "Short",
+          startIndex: 44,
+          finishIndex: 45,
+          startValue: 36514.59,
+          finishValue: 36446.19,
+        },
+        {
+          direction: "Short",
+          startIndex: 45,
+          finishIndex: 60,
+          startValue: 36446.19,
+          finishValue: 36392.11,
+        },
+        {
+          direction: "Long",
+          startIndex: 60,
+          finishIndex: 108,
+          startValue: 36392.11,
+          finishValue: 36467,
+        },
+        {
+          direction: "Long",
+          startIndex: 108,
+          finishIndex: 137,
+          startValue: 36467,
+          finishValue: 36529.83,
+        },
+        {
+          direction: "Short",
+          startIndex: 137,
+          finishIndex: 141,
+          startValue: 36529.83,
+          finishValue: 36458.74,
+        },
+        {
+          direction: "Long",
+          startIndex: 141,
+          finishIndex: 154,
+          startValue: 36458.74,
+          finishValue: 36516,
+        },
+        {
+          direction: "Long",
+          startIndex: 154,
+          finishIndex: 164,
+          startValue: 36516,
+          finishValue: 36572.01,
+        },
+        {
+          direction: "Long",
+          startIndex: 164,
+          finishIndex: 169,
+          startValue: 36572.01,
+          finishValue: 36629.99,
+        },
+        {
+          direction: "Long",
+          startIndex: 169,
+          finishIndex: 170,
+          startValue: 36629.99,
+          finishValue: 36695.82,
+        },
+        {
+          direction: "Short",
+          startIndex: 170,
+          finishIndex: 173,
+          startValue: 36695.82,
+          finishValue: 36620,
+        },
+        {
+          direction: "Short",
+          startIndex: 173,
+          finishIndex: 183,
+          startValue: 36620,
+          finishValue: 36568.01,
+        },
+        {
+          direction: "Short",
+          startIndex: 183,
+          finishIndex: 190,
+          startValue: 36568.01,
+          finishValue: 36496.21,
+        },
+        {
+          direction: "Long",
+          startIndex: 190,
+          finishIndex: 199,
+          startValue: 36496.21,
+          finishValue: 36549.99,
+        },
+        {
+          direction: "Long",
+          startIndex: 199,
+          finishIndex: 221,
+          startValue: 36549.99,
+          finishValue: 36613.92,
+        },
+        {
+          direction: "Short",
+          startIndex: 221,
+          finishIndex: 225,
+          startValue: 36613.92,
+          finishValue: 36556,
+        },
+        {
+          direction: "Short",
+          startIndex: 225,
+          finishIndex: 238,
+          startValue: 36556,
+          finishValue: 36504.19,
+        },
+        {
+          direction: "Short",
+          startIndex: 238,
+          finishIndex: 249,
+          startValue: 36504.19,
+          finishValue: 36446.33,
+        },
+        {
+          direction: "Short",
+          startIndex: 249,
+          finishIndex: 268,
+          startValue: 36446.33,
+          finishValue: 36395.99,
+        },
+        {
+          direction: "Long",
+          startIndex: 268,
+          finishIndex: 313,
+          startValue: 36395.99,
+          finishValue: 36446.63,
+        },
+        {
+          direction: "Short",
+          startIndex: 313,
+          finishIndex: 407,
+          startValue: 36446.63,
+          finishValue: 36389,
+        },
+        {
+          direction: "Short",
+          startIndex: 407,
+          finishIndex: 531,
+          startValue: 36389,
+          finishValue: 36333.06,
+        },
+        {
+          direction: "Short",
+          startIndex: 531,
+          finishIndex: 629,
+          startValue: 36333.06,
+          finishValue: 36279.33,
+        },
+        {
+          direction: "Short",
+          startIndex: 629,
+          finishIndex: 645,
+          startValue: 36279.33,
+          finishValue: 36219.62,
+        },
+        {
+          direction: "Long",
+          startIndex: 645,
+          finishIndex: 650,
+          startValue: 36219.62,
+          finishValue: 36276.01,
+        },
+        {
+          direction: "Long",
+          startIndex: 650,
+          finishIndex: 672,
+          startValue: 36276.01,
+          finishValue: 36328,
+        },
+        {
+          direction: "Long",
+          startIndex: 672,
+          finishIndex: 695,
+          startValue: 36328,
+          finishValue: 36415.99,
+        },
+        {
+          direction: "Long",
+          startIndex: 695,
+          finishIndex: 745,
+          startValue: 36415.99,
+          finishValue: 36477.94,
+        },
+        {
+          direction: "Short",
+          startIndex: 745,
+          finishIndex: 768,
+          startValue: 36477.94,
+          finishValue: 36427.9,
+        },
+        {
+          direction: "Long",
+          startIndex: 768,
+          finishIndex: 880,
+          startValue: 36427.9,
+          finishValue: 36478.22,
+        },
+        {
+          direction: "Short",
+          startIndex: 880,
+          finishIndex: 939,
+          startValue: 36478.22,
+          finishValue: 36407.77,
+        },
+        {
+          direction: "Long",
+          startIndex: 939,
+          finishIndex: 967,
+          startValue: 36407.77,
+          finishValue: 36459.29,
+        },
+      ];
+
+      let profit = 0;
+      let QUANTATY = 1;
+      // ALL TIME OPEN LONG
+      // OPEN DEPENDS ON PREV STEP
+
+      let currState = {
+        direction: "Long",
+        currentPositionLong: [
+          {
+            price: steps[0].startValue,
+            count: QUANTATY,
+          },
+        ],
+        currentPositionShort: [],
+        position: 0,
+      };
+
+      let conditionProfit = (step, res) => {
+        let { sumLong, sumShort } = currentState(step);
+        if (res) {
+          return sumLong + sumShort;
+        }
+
+        return currState.direction == "Long"
+          ? sumLong + sumShort > 0
+          : sumShort + sumLong > 0;
+      };
+
+      let changeDirection = () => {
+        if (currState.direction == "Long") {
+          currState.direction = "Short";
+        } else {
+          currState.direction = "Long";
+        }
+      };
+
+      let lastStepDelta = (direction, step) => {
+        console.log(
+          "POSITION_BEFORE",
+          currState.position,
+          currState.currentPositionLong,
+          currState.currentPositionShort,
+          step
+        );
+        if (direction == "Long") {
+          currState.position +=
+            currState.currentPositionShort * -10 +
+            currState.currentPositionLong * 10;
+        }
+        if (direction == "Short") {
+          currState.position +=
+            currState.currentPositionLong * -10 +
+            currState.currentPositionShort * 10;
+        }
+        console.log(
+          "POSITION",
+          currState.position,
+          currState.currentPositionLong,
+          currState.currentPositionShort,
+          step
+        );
+      };
+
+      let buyPositions = (step) => {
+        if (currState.direction == "Long") {
+          currState.currentPositionShort.push({
+            count: QUANTATY * 2,
+            price: step.finishValue,
+          });
+          currState.currentPositionLong.push({
+            count: QUANTATY,
+            price: step.finishValue,
+          });
+        } else if (currState.direction == "Short") {
+          currState.currentPositionLong.push({
+            count: QUANTATY * 2,
+            price: step.finishValue,
+          });
+          currState.currentPositionShort.push({
+            count: QUANTATY,
+            price: step.finishValue,
+          });
+          // currState.currentPositionLong += 2;
+          // currState.currentPositionShort += 1;
+        }
+      };
+
+      let currentState = (step) => {
+        let currentPrice = step.startValue;
+
+        let sumLong = 0;
+        let sumShort = 0;
+        console.log("xx", [...currState.currentPositionLong]);
+        currState.currentPositionLong.forEach((el) => {
+          sumLong += (currentPrice - el.price) * el.count;
+        });
+
+        currState.currentPositionShort.forEach((el) => {
+          sumShort += (el.price - currentPrice) * el.count;
+        });
+
+        // currState.currentPositionLong
+        return { sumLong, sumShort };
+      };
+
+      function algo() {
+        steps.forEach((el, index) => {
+          console.log("INDX__", index, currentState(el));
+          // CASE PROFIT
+
+          if (conditionProfit(el)) {
+            profit += conditionProfit(el, true);
+            currState = {
+              direction: "Long",
+              currentPositionLong: [
+                {
+                  price: el.startValue,
+                  count: QUANTATY,
+                },
+              ],
+              currentPositionShort: [],
+              position: 0,
+            };
+          }
+
+          // STEP1
+          else if (currState.direction != el.direction) {
+            // lastStepDelta(el.direction, "STEP1");
+            buyPositions(el);
+          }
+
+          // STEP 2
+          else if (currState.direction == el.direction) {
+            //lastStepDelta(el.direction, "STEP2");
+
+            console.log(
+              "INSID CASE 2",
+              conditionProfit(el),
+              currState.direction
+            );
+            if (conditionProfit(el)) {
+              profit += 1;
+              currState = {
+                direction: "Long",
+                currentPositionLong: [
+                  {
+                    price: el.finishValue,
+                    count: QUANTATY,
+                  },
+                ],
+                currentPositionShort: [],
+                position: 0,
+              };
+            } else {
+              changeDirection();
+              buyPositions(el);
+            }
+          }
+        });
+      }
+
+      algo();
+      console.log("PROFIT", profit, currState);
+    </script>
+  </body>
+</html>
